@@ -8,7 +8,7 @@ services:
     env_file:
       - back-end/.env
     volumes:
-      - pg_sorteador-db:/var/lib/postgresql/data
+      - pg_sorteador_volume:/var/lib/postgresql/data
   
   node_sorteador_app:
     container_name: node_sorteador_app
@@ -41,6 +41,7 @@ services:
     env_file:
       - back-end/.env
 
+
 volumes:
-  pg_sorteador-db:
+  pg_sorteador_volume:
   build_react:
